@@ -1,10 +1,106 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@brooin8
+manbeltran /
+FSI-Implement-Coin-Flipper
+Public
+forked from HackerUSA-CE/FSI-Implement-Coin-Flipper
+
+0
+0
+
+    136
+
+Code
+Pull requests
+Actions
+Projects
+Wiki
+Security
+
+    Insights
+
+FSI-Implement-Coin-Flipper/assets/js/script.js /
+@manbeltran
+manbeltran completed
+Latest commit 40e5b14 7 minutes ago
+History
+2 contributors
+@brandiw
+@manbeltran
+88 lines (63 sloc) 3.37 KB
 // TODO: Declare any global variables we need
+let tails = document.querySelector('#tails')
+let heads = document.querySelector('#heads')
+let headsPercent = document.querySelector('#heads-percent')
+let tailsPercent = document.querySelector('#tails-percent')
+let tailsNumber = 0
+let headsNumber = 0
+let headsPercentNumber = 0
+let tailsPercentNumber = 0
+let flipTotal
+let clearButton = document.querySelector('#clear')
+//= headsNumber + tailsNumber
+
+let side = document.querySelector('#pennyImage')
+let flipButton = document.querySelector('#flip')
+//let rolledValue = Math.ceil(Math.round(Math.random() * 1))
+
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    // This is just a sanity check to make sure your JavaScript script is getting loaded
-    // You can remove it once you see it in your browser console in the developer tools
-    console.log('Hi')
+
+    flipButton.addEventListener('click', function() {
+        let rolledValue = Math.ceil(Math.round(Math.random() * 1))
+        
+        if (rolledValue == 0) {
+            document.querySelector('#pennyImage').src = 'assets/images/penny-tails.jpg'
+            document.querySelector('#message').textContent = 'Tails'
+            document.getElementById('tails').innerHTML = tailsNumber = tailsNumber + 1
+            flipTotal = headsNumber + tailsNumber
+            //tailsPercentNumber = flipTotal / tailsNumber
+            //tailsPercent.textContent = tailsPercentNumber
+
+            //document.getElementById('tails-percent').innerHTML = Math.round((tailsNumber / flipTotal) * 100)
+        } else {
+            document.querySelector('#pennyImage').src = 'assets/images/penny-heads.jpg'
+            document.querySelector('#message').textContent = 'Heads'
+            document.getElementById('heads').innerHTML = headsNumber = headsNumber + 1
+            flipTotal = headsNumber + tailsNumber
+            //headsPercentNumber = flipTotal / headsNumber
+            //headsPercent.textContent = headsPercentNumber
+            //document.getElementById('heads-percent').innerHTML = Math.round((headsNumber / flipTotal) * 100)
+            
+        }
+        
+        tailsPercentNumber = flipTotal / tailsNumber
+        headsPercentNumber = flipTotal / headsNumber
+        document.getElementById('heads-percent').innerHTML = Math.round((headsNumber / flipTotal) * 100) + "%"
+        document.getElementById('tails-percent').innerHTML = Math.round((tailsNumber / flipTotal) * 100) + "%"
+        console.log(rolledValue)
+      
+        
+
+        clearButton.addEventListener('click', function () {
+            tailsNumber = 0
+            headsNumber = 0
+            document.getElementById('heads').innerHTML = 0
+            document.getElementById('tails').innerHTML = 0
+            document.getElementById('tails-percent').innerHTML = 0
+            document.getElementById('heads-percent').innerHTML = 0
+
+        })
+
+
+
+    })
+
+
 
     // TODO: Add event listener and handler for flip and clear buttons
 
@@ -25,3 +121,19 @@ document.addEventListener('DOMContentLoaded', function () {
         // TODO: Update the scoreboard (same logic as in flip button click handler)
 
 })
+
+    © 2021 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+Loading complete
