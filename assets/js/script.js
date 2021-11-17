@@ -1,38 +1,4 @@
 
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@brooin8
-manbeltran /
-FSI-Implement-Coin-Flipper
-Public
-forked from HackerUSA-CE/FSI-Implement-Coin-Flipper
-
-0
-0
-
-    136
-
-Code
-Pull requests
-Actions
-Projects
-Wiki
-Security
-
-    Insights
-
-FSI-Implement-Coin-Flipper/assets/js/script.js /
-@manbeltran
-manbeltran completed
-Latest commit 40e5b14 7 minutes ago
-History
-2 contributors
-@brandiw
-@manbeltran
-88 lines (63 sloc) 3.37 KB
 // TODO: Declare any global variables we need
 let tails = document.querySelector('#tails')
 let heads = document.querySelector('#heads')
@@ -121,19 +87,3 @@ document.addEventListener('DOMContentLoaded', function () {
         // TODO: Update the scoreboard (same logic as in flip button click handler)
 
 })
-
-    © 2021 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
-Loading complete
